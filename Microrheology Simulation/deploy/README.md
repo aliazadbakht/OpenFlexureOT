@@ -77,32 +77,6 @@ For viscoelastic fluids: `|η*|` decreases with frequency (shear thinning)
 | Agarose 0.1% | 0.002 | 10 | 10 | Soft gel |
 | Agarose 1% | 0.005 | 500 | 100 | Stiff gel |
 
-## Usage
-
-### Running Locally (Python)
-
-```bash
-pip install numpy matplotlib scipy
-python microrheology_simulation.py
-```
-
-### Web Version (PyScript)
-
-Simply open `microrheology_simulation.html` in a modern web browser. No installation required!
-
-The first load takes 10-30 seconds as PyScript downloads the Python runtime.
-
-### Deploying to GitHub Pages
-
-1. Copy `microrheology_simulation.html` to your repository root as `index.html`:
-   ```bash
-   cp microrheology_simulation.html index.html
-   ```
-
-2. Push to GitHub and enable GitHub Pages in repository settings.
-
-3. Access at: `https://yourusername.github.io/your-repo/`
-
 ## What to Explore
 
 ### 1. Newtonian vs Viscoelastic
