@@ -5,49 +5,94 @@ An interactive simulation demonstrating passive microrheology using optical twee
 ## Features
 
 🔬 **Multiple Media Types**
-- **Newtonian Fluids**: Water, 50% Glycerol, 80% Glycerol
-- **Viscoelastic Polymers**: Dilute PEO (0.1%), Semi-dilute (1%), Entangled (5%)
-- **Gels**: Weak Agarose (0.1%), Strong Agarose (1%)
 
-📊 **Real-time Visualizations**
-- **Trapped Bead**: Watch Brownian motion change with medium properties
-- **Dynamic Moduli**: G'(ω) and G''(ω) vs frequency (log-log plot)
-- **Complex Viscosity**: |η*(ω)| vs frequency
-- **Mean Square Displacement (MSD)**: Computed from particle trajectory
-
-⚙️ **Physical Parameters**
-- 2 µm silica bead
-- 1 pN/µm trap stiffness
-- Temperature: 293 K (20°C)
-- Maxwell viscoelastic model
-
-## Physics Background
-
-### Microrheology Principles
-
-Passive microrheology extracts viscoelastic properties from thermal fluctuations of embedded probe particles. The Mean Square Displacement (MSD) relates to the complex modulus through the Generalized Stokes-Einstein Relation.
-
-### Dynamic Moduli
-
-- **G' (Storage Modulus)**: Elastic/solid-like response - energy stored per cycle
-- **G'' (Loss Modulus)**: Viscous/liquid-like response - energy dissipated per cycle
-
-### Maxwell Model
-
-For viscoelastic media:
-- Short relaxation times: Liquid-like behavior (high G'')
-- Long relaxation times: Gel-like behavior (high G')
-- Crossover frequency indicates transition from viscous to elastic dominance
-
-## How to Use
-
-1. **Launch the simulation** by opening this page
-2. **Select a medium** from the dropdown to change fluid properties
-3. **Observe the bead motion** - see how Brownian motion varies with media
-4. **Analyze the results**:
+1. Launch the simulation by opening this page.
+2. Select a medium from the dropdown to change fluid properties.
+3. Observe the bead motion across different media.
+4. Analyze results:
    - MSD curve shows particle displacement behavior
    - G' and G'' show elastic vs viscous contributions
    - Compare different media to understand viscoelasticity
+
+### Complex Viscosity
+
+```
+|η*(ω)| = √(G'² + G''²) / ω
+```
+
+For Newtonian fluids: `|η*| = η` (constant)
+For viscoelastic fluids: `|η*|` decreases with frequency (shear thinning)
+
+## Medium Properties
+
+| Medium | η (Pa·s) | G₀ (Pa) | τ (s) | Behavior |
+|--------|----------|---------|-------|----------|
+| Water | 0.001 | 0 | — | Newtonian |
+| 50% Glycerol | 0.006 | 0 | — | Newtonian |
+| 80% Glycerol | 0.06 | 0 | — | Newtonian |
+| PEO 0.1% | 0.003 | 0.5 | 0.01 | Weak viscoelastic |
+| PEO 1% | 0.01 | 5 | 0.1 | Moderate viscoelastic |
+| PEO 5% | 0.05 | 50 | 1.0 | Strong viscoelastic |
+| Agarose 0.1% | 0.002 | 10 | 10 | Soft gel |
+| Agarose 1% | 0.005 | 500 | 100 | Stiff gel |
+
+## What to Explore
+
+### 1. Newtonian vs Viscoelastic
+- Start with Water: G' ≈ 0, only G'' (viscous loss)
+- Switch to PEO 1%: Both G' and G'' are significant
+- Notice the crossover frequency where G' = G''
+
+### 2. Viscosity Effects
+- Compare Water → 50% Glycerol → 80% Glycerol
+- Watch how Brownian motion slows dramatically
+- |η*| increases but remains frequency-independent
+
+### 3. Gel Behavior
+- Try Strong Gel (Agarose 1%)
+- G' >> G'' at all frequencies (solid-like)
+- Very restricted particle motion
+
+### 4. Relaxation Time
+- Compare polymers with different τ values
+- Short τ (PEO 0.1%): Crossover at high frequency
+- Long τ (Agarose): Crossover below measurement range
+| PEO 1% | 0.01 | 5 | 0.1 | Moderate viscoelastic |
+| PEO 5% | 0.05 | 50 | 1.0 | Strong viscoelastic |
+| Agarose 0.1% | 0.002 | 10 | 10 | Soft gel |
+| Agarose 1% | 0.005 | 500 | 100 | Stiff gel |
+
+## What to Explore
+
+### 1. Newtonian vs Viscoelastic
+- Start with **Water**: G' ≈ 0, only G'' (viscous loss)
+- Switch to **PEO 1%**: Both G' and G'' are significant
+- Notice the crossover frequency where G' = G''
+
+### 2. Viscosity Effects
+- Compare **Water** → **50% Glycerol** → **80% Glycerol**
+- Watch how Brownian motion slows dramatically
+- |η*| increases but remains frequency-independent
+
+### 3. Gel Behavior
+- Try **Strong Gel (Agarose 1%)**
+- G' >> G'' at all frequencies (solid-like)
+- Very restricted particle motion
+
+### 4. Relaxation Time
+- Compare polymers with different τ values
+- Short τ (PEO 0.1%): Crossover at high frequency
+- Long τ (Agarose): Crossover below measurement range
+
+## Files
+
+| File | Description |
+|------|-------------|
+| `microrheology_simulation.html` | PyScript web version (standalone) |
+| `microrheology_simulation.py` | Python/Matplotlib version |
+| `microrheology_simulation.jsx` | React component version |
+| `README.md` | This documentation |
+>>>>>>> 9b4f15eb00e7bf64c8dd839cd200d67b0a9d2a33
 
 ## Applications
 
