@@ -77,33 +77,7 @@ For viscoelastic fluids: `|η*|` decreases with frequency (shear thinning)
 | Agarose 0.1% | 0.002 | 10 | 10 | Soft gel |
 | Agarose 1% | 0.005 | 500 | 100 | Stiff gel |
 
-## Usage
 
-### Running Locally (Python)
-
-```bash
-pip install numpy matplotlib scipy
-python microrheology_simulation.py
-```
-
-### Web Version (PyScript)
-
-Simply open `microrheology_simulation.html` in a modern web browser. No installation required!
-
-The first load takes 10-30 seconds as PyScript downloads the Python runtime.
-
-### Deploying to GitHub Pages
-
-1. Copy `microrheology_simulation.html` to your repository root as `index.html`:
-   ```bash
-   cp microrheology_simulation.html index.html
-   ```
-
-2. Push to GitHub and enable GitHub Pages in repository settings.
-
-3. Access at: `https://yourusername.github.io/your-repo/`
-
-## What to Explore
 
 ### 1. Newtonian vs Viscoelastic
 - Start with **Water**: G' ≈ 0, only G'' (viscous loss)
@@ -125,14 +99,7 @@ The first load takes 10-30 seconds as PyScript downloads the Python runtime.
 - Short τ (PEO 0.1%): Crossover at high frequency
 - Long τ (Agarose): Crossover below measurement range
 
-## Files
 
-| File | Description |
-|------|-------------|
-| `microrheology_simulation.html` | PyScript web version (standalone) |
-| `microrheology_simulation.py` | Python/Matplotlib version |
-| `microrheology_simulation.jsx` | React component version |
-| `README.md` | This documentation |
 
 ## Applications
 
